@@ -1,0 +1,19 @@
+Pertanyaan Refleksi
+Setelah menyelesaikan kode, jawab pertanyaan berikut:
+
+Apa yang dimaksud dengan constructor overloading dalam pemrograman berorientasi objek?
+Bagaimana cara Java membedakan constructor yang memiliki nama sama namun parameter berbeda?
+Apa perbedaan antara mengakses variabel secara langsung (misalnya: objek.variabel = nilai) dengan menggunakan method setter?
+Jelaskan konsep encapsulation dan bagaimana method dapat membantu melindungi data dalam sebuah class!
+Mengapa constructor tidak memiliki return type, bahkan tidak menggunakan kata kunci void?
+
+Jawaban:
+1. Constructor overloading adalah kondisi ketika sebuah kelas memiliki lebih dari satu constructor dengan nama yang sama, tetapi parameter yang dimilikinya berbeda baik dari sisi jumlah, tipe data, maupun urutannya. Dengan adanya overloading ini, objek dari kelas tersebut dapat dibuat dengan cara yang fleksibel sesuai kebutuhan inisialisasi.
+
+2. Java dapat membedakan constructor-constructor yang namanya sama tersebut berdasarkan signaturenya. Signature ini mencakup jenis parameter, jumlahnya, dan urutan penulisannya. Selama signaturenya berbeda, Java akan menganggapnya sebagai constructor yang berbeda meskipun namanya tetap sama seperti nama kelas.
+
+3. Perbedaan antara mengubah variabel secara langsung dengan menggunakan setter. Jika kita mengakses variabel secara langsung (misalnya objek.nama = "Aldi";), maka perubahan terjadi tanpa kontrol dan bisa saja menghasilkan nilai yang tidak valid. Sementara itu, jika menggunakan method setter (misalnya objek.setNama("Aldi");), kita bisa memasukkan validasi sebelum nilai tersebut disimpan, sehingga lebih aman dan sesuai konsep OOP.
+
+4. Konsep yang berkaitan dengan hal ini adalah encapsulation, yaitu prinsip menyembunyikan data atau detail implementasi agar tidak bisa diakses sembarangan dari luar kelas. Biasanya variabel dibuat sebagai private, lalu aksesnya dilakukan melalui getter dan setter agar ada batasan serta proses validasi sebelum data digunakan atau dimodifikasi.
+
+5. Constructor secara otomatis dijalankan ketika objek dibuat menggunakan new. Constructor berfungsi untuk menginisialisasi objek, dan secara implisit mengembalikan reference ke objek tersebut. Karena itu, Java tidak mengizinkan constructor memiliki tipe kembalian eksplisit.

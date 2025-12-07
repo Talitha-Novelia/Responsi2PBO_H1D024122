@@ -1,0 +1,18 @@
+﻿SOAL PENGAYAAN (Refleksi Polimorfisme)
+Jawablah pertanyaan berikut:
+1. Apa yang dimaksud dengan polimorfisme dalam OOP? Jelaskan bagaimana metode override bekerja.
+2. Mengapa array bertipe DefaultMesin dapat menyimpan objek MesinMotor dan MesinTraktor?
+3. Apa perbedaan override dan overload?
+4. Apa keuntungan menggunakan polimorfisme dalam sistem inventaris seperti contoh di atas?
+5. Bagaimana cara kerja dynamic dispatch pada Java saat memanggil method override?
+
+Jawaban:
+1. Polimorfisme dalam OOP adalah konsep di mana satu referensi dapat memiliki banyak bentuk perilaku, tergantung objek mana yang sedang diwakilinya. Hal ini terjadi karena adanya mekanisme override, yaitu ketika subclass menulis ulang method dari superclass agar memiliki perilaku yang lebih spesifik. Saat method tersebut dipanggil, yang dijalankan adalah versi milik subclass, bukan milik parent.
+
+2. Dalam kasus array bertipe DefaultMesin, objek seperti MesinMotor atau MesinTraktor tetap bisa disimpan di dalamnya karena keduanya merupakan turunan dari kelas tersebut. Ini mengikuti prinsip IS-A, di mana setiap objek turunan dianggap sebagai representasi valid dari kelas induknya.
+
+3. Terkait perbedaan override dan overload, keduanya sama-sama menggunakan nama method yang sama, tetapi konteksnya berbeda. Override terjadi ketika subclass mengganti implementasi method dari superclass dengan signature yang sama, sedangkan overload terjadi ketika sebuah kelas memiliki method dengan nama yang sama tetapi parameter berbeda. Override berjalan pada runtime, sedangkan overload diputuskan pada compile-time.
+
+4. Menggunakan polimorfisme membuat program lebih fleksibel dan mudah dikembangkan. Misalnya, jika suatu saat ada jenis mesin baru yang ditambahkan, kita tidak perlu mengubah logika loop atau struktur data—cukup buat subclass baru, dan sistem bisa langsung menggunakannya.
+
+5. Mekanisme yang membuat polimorfisme bekerja di Java disebut dynamic dispatch, di mana Java menentukan method mana yang dipanggil saat runtime berdasarkan objek sebenarnya di memori, bukan tipe referensinya. Jadi meskipun suatu objek disimpan dalam variabel bertipe DefaultMesin, ketika method dipanggil, yang dieksekusi tetap implementasi milik class aslinya karena Java menggunakan struktur seperti virtual method table untuk menentukan method yang tepat saat program berjalan.

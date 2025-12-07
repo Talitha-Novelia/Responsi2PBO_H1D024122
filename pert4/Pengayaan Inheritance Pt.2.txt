@@ -1,0 +1,22 @@
+[PERTANYAAN PENGAYAAN]
+
+1. Mengapa constructor di class Member wajib memanggil constructor Customer menggunakan super(...)?
+
+2. Apa tujuan memanggil super.tampilkanInfo() saat melakukan overriding method di subclass?
+
+3. Berikan contoh kondisi di mana pemanggilan super.method() sangat penting dalam pewarisan.
+
+4. Bagaimana keyword super membantu membedakan atribut yang memiliki nama sama antara parent dan child?
+
+5. Mengapa pendekatan inheritance lebih efisien dibanding menyalin ulang seluruh atribut dan method ke dalam class Member?
+
+JAWABAN:
+1. Karena Superclass (Customer) memiliki constructor berparameter dan tidak memiliki default constructor (tanpa parameter). Subclass wajib menginisialisasi state milik superclass terlebih dahulu. Jika tidak dipanggil manual, Java akan mencari default constructor parent, yang dalam kasus ini tidak ada, sehingga terjadi error.
+
+2. Tujuannya adalah untuk menggunakan kembali (reuse) logika yang sudah didefinisikan di superclass. Kita tidak perlu menulis ulang kode untuk menampilkan nama, ID, dan total belanja di Member. Cukup panggil yang sudah ada, lalu tambahkan kode untuk menampilkan poin dan level. Ini prinsip "Don't Repeat Yourself" (DRY).
+
+3. Contoh: Sering terjadi pada method lifecycle seperti `onCreate` di Android atau inisialisasi GUI. Method orang tua melakukan setup dasar yang vital, method anak menambahkan setup spesifik. Jika `super.method()` tidak dipanggil, setup dasar gagal dan program bisa crash atau tidak berjalan semestinya.
+
+4. Jika Child class memiliki variabel dengan nama yang sama dengan Parent (Shadowing), maka `this.namaVar` akan mengacu pada variabel di Child, sedangkan `super.namaVar` akan mengacu pada variabel di Parent. `super` memberikan akses eksplisit ke anggota superclass yang tersembunyi.
+
+5. Inheritance jauh lebih efisien dibanding menyalin ulang atribut dan method ke class Member karena kita tidak perlu menulis kode yang sama dua kali. Kalau ada perubahan di superclass, misalnya cara menampilkan nama pada Customer, maka Member otomatis ikut berubah tanpa perlu edit terpisah. Selain itu, struktur kode jadi lebih rapi, konsisten, dan mudah dirawat. Inheritance juga mendukung polymorphism, sehingga objek Member tetap bisa diperlakukan sebagai Customer dalam berbagai konteks program. Secara keseluruhan, pendekatan ini lebih hemat kode, lebih terstruktur, dan jauh lebih fleksibel.

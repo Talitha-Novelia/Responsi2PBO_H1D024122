@@ -1,0 +1,19 @@
+Pertanyaan Refleksi
+Setelah menyelesaikan kode, jawab pertanyaan berikut:
+
+1. Apa fungsi keyword 'extends' dalam deklarasi class Java?
+2. Jelaskan perbedaan antara Method Overloading (yang ada di latihan sebelumnya) dengan Method Overriding (yang ada di latihan ini)!
+3. Apa kegunaan keyword 'super' di dalam constructor subclass (Manajer)?
+4. Jika variabel di class Karyawan diubah access modifier-nya menjadi 'private', apa yang akan terjadi pada class Manajer? Bagaimana solusinya?
+5. Mengapa kita perlu menggunakan Inheritance? Apa keuntungan utamanya dibandingkan membuat dua class yang terpisah sama sekali (misal class Karyawan dan class Manajer dibuat terpisah tanpa hubungan)?
+
+Jawaban:
+1. Keyword extends pada deklarasi class Java digunakan untuk menunjukkan bahwa sebuah kelas merupakan turunan dari kelas lain, sehingga sifat dan perilaku dari kelas induk dapat diwariskan dan digunakan kembali di kelas turunannya. Konsep ini berkaitan dengan inheritance dalam OOP.
+
+2. Perbedaan antara method overloading dan method overriding, overloading terjadi ketika satu kelas memiliki beberapa method dengan nama yang sama namun parameter yang berbeda, baik dari sisi tipe, jumlah, atau urutan. Sementara overriding terjadi ketika subclass menuliskan ulang method yang sudah ada di superclass dengan nama, parameter, dan tipe return yang sama agar perilakunya lebih sesuai dengan kebutuhan subclass.
+
+3. Di dalam subclass seperti Manajer, keyword super digunakan di dalam constructor untuk memanggil constructor milik superclass terlebih dahulu. Ini memastikan bahwa proses inisialisasi yang sudah ditentukan di kelas induk tetap dijalankan sebelum subclass menambahkan logika tambahan lainnya.
+
+4. Jika variabel di kelas Karyawan diubah menjadi private, maka subclass Manajer tidak bisa mengakses variabel tersebut secara langsung. Kondisi ini akan menyebabkan error karena sifat private hanya mengizinkan akses dari dalam kelas itu sendiri. Solusinya adalah mengubah modifier menjadi protected atau menyediakan getter dan setter agar variabel tetap dapat diakses secara aman oleh subclass.
+
+5. Secara keseluruhan, penggunaan inheritance dalam pemrograman sangat membantu karena dapat meningkatkan efisiensi dan keteraturan kode. Dengan inheritance bisa menghindari duplikasi kode, mempermudah maintenance ketika ada perubahan, serta mendukung konsep polymorphism sehingga objek subclass tetap bisa diperlakukan sebagai objek superclass. Dibandingkan membuat kelas secara terpisah tanpa hubungan, inheritance membuat program lebih fleksibel, modular, dan mudah dikelola dalam jangka panjang.

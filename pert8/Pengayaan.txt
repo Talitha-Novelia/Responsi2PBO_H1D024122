@@ -1,0 +1,19 @@
+Setelah anda menyelesaikan kode, tolong jawab pertanyaan dibawah ini ya =
+
+
+1. Apa tujuan utama adanya interface dalam pemrograman berorientasi objek, dan bagaimana interface membantu menciptakan kontrak perilaku?
+2. Mengapa interface dapat memiliki banyak implementasi, dan apa makna konseptual dari kemampuan tersebut dalam desain sistem?
+3. Apa perbedaan mendasar antara extends dan implements dalam konteks interface, jika dilihat secara konsep tanpa melihat contoh kode?
+4. Apa alasan diperkenalkannya default method dalam interface, dan bagaimana fitur ini memengaruhi keberlangsungan (compatibility) suatu sistem yang sudah berjalan?
+5. Bagaimana konsep multiple interface memperluas fleksibilitas desain tanpa menimbulkan masalah kompleksitas yang biasa muncul pada multiple inheritance?
+
+Jawaban:
+1. Tujuan utama dari interface dalam OOP adalah untuk menetapkan sebuah kontrak perilaku yang harus dipenuhi oleh class yang mengimplementasikannya. Dengan adanya interface, kita dapat menentukan daftar method yang wajib dimiliki tanpa menentukan cara implementasinya, sehingga semua class yang menggunakan interface tersebut tetap konsisten dalam struktur, meskipun detail kodenya bisa berbeda.
+
+2. Interface dapat memiliki banyak implementasi karena konsep yang mendasarinya adalah polimorfisme, di mana satu antarmuka dapat diwujudkan oleh berbagai class dengan karakter yang berbeda. Secara desain, kemampuan ini membuat sistem lebih fleksibel dan modular, karena developer dapat mengganti implementasi tertentu tanpa mengubah struktur program yang bergantung pada interface tersebut.
+
+3. Secara konsep, extends menggambarkan hubungan pewarisan langsung di mana sebuah class memperluas sifat dan perilaku dari class lain (hubungan “is-a”). Sementara itu, implements digunakan untuk menyatakan bahwa sebuah class menyetujui kontrak perilaku yang ditentukan oleh interface, atau dengan kata lain class tersebut “dapat melakukan” hal yang didefinisikan dalam interface.
+
+4. Default method diperkenalkan untuk menjaga kompatibilitas sistem ketika interface diperbarui. Dengan fitur ini, kita dapat menambahkan method baru ke interface tanpa membuat class lama yang sudah mengimplementasikannya mengalami error, karena method tersebut sudah memiliki implementasi bawaan.
+
+5. Konsep multiple interface memberikan fleksibilitas besar dalam desain program karena sebuah class dapat memiliki lebih dari satu peran tanpa menghadirkan masalah kompleks seperti pada multiple inheritance di class. Karena interface tidak membawa state dan hanya menyediakan kontrak, Java dapat mengizinkan multiple interface dengan aman. Jika terjadi konflik implementasi, programmer tetap memiliki kendali untuk memilih atau menimpa method yang sesuai.

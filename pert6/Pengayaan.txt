@@ -1,0 +1,19 @@
+Pertanyaan Refleksi
+Setelah menyelesaikan kode, jawab pertanyaan berikut:
+
+1. Apa itu abstract class dan Kenapa kita membutuhkan Abstarct class?
+2. Apa perbedaan utama antara abstract class dan class biasa dalam pemrograman berorientasi objek? 
+3. Mengapa subclass wajib mengimplementasikan semua abstract method dari parent class?
+4. Mengapa abstract method tidak boleh memiliki isi implementasi di dalam abstract class?
+5. Bagaimana abstract class dapat mendukung konsep polimorfisme, dan mengapa objek yang direferensikan melalui tipe abstract class tetap dapat menjalankan perilaku berbeda pada masing-masing subclass?
+
+Jawaban:
+1. Abstract class adalah kelas yang dibuat sebagai dasar atau kerangka umum bagi kelas turunannya dan tidak bisa langsung dibuat objeknya. Biasanya, abstract class digunakan ketika ada konsep besar yang sama, tetapi detail perilakunya berbeda pada tiap turunannya. Jadi, abstract class membantu menyatukan aturan dan struktur, tapi tetap memberi fleksibilitas agar subclass menentukan sendiri implementasinya.
+
+2. Perbedaan utama antara abstract class dan class biasa ada pada instansiasi dan tipe method yang didukung. Abstract class tidak bisa diinstansiasi dan dapat memiliki abstract method, sedangkan class biasa bisa diinstansiasi dan hanya memiliki method dengan implementasi lengkap.
+
+3. Subclass wajib mengimplementasikan abstract method karena method tersebut merupakan kontrak yang ditentukan oleh parent class. Dengan memenuhi implementasinya, subclass dapat menjadi kelas konkret dan siap digunakan.
+
+4. Abstract method tidak diberi isi implementasi karena tujuannya hanya menentukan apa yang harus ada, bukan bagaimana cara kerjanya. Cara kerja tersebut berbeda pada setiap subclass sesuai kebutuhan masing-masing.
+
+5. Abstract class mendukung polimorfisme karena objek yang direferensikan menggunakan tipe abstract class dapat menjalankan perilaku yang berbeda tergantung pada subclass tempat objek tersebut berasal. Mekanisme dynamic dispatch memastikan bahwa method yang dijalankan adalah milik kelas asli objek, bukan tipe referensinya.
