@@ -28,7 +28,7 @@ class analisisMesin {
             if (m instanceof mesinMotor) {
                 ((mesinMotor) m).suaraMesin();
             } else if (m instanceof mesinTraktorListrik) {
-                 // Check Listrik BEFORE Traktor because Listrik IS-A Traktor
+                // Check Listrik BEFORE Traktor because Listrik IS-A Traktor
                 ((mesinTraktorListrik) m).suaraMesin();
             } else if (m instanceof mesinTraktor) {
                 ((mesinTraktor) m).suaraMesin();
@@ -44,7 +44,7 @@ class analisisMesin {
                 highest = m;
             }
         }
-        System.out.println(highest.namaMesin + " \u2192 " + highest.nilaiPerforma());
+        System.out.println(highest.namaMesin + " -> " + highest.nilaiPerforma());
 
         System.out.println("\n=== TOP 3 MESIN TERBAIK ===");
 
@@ -60,7 +60,7 @@ class analisisMesin {
         }
 
         for (int i = 0; i < 3; i++) {
-            System.out.println((i + 1) + ". " + mesin[i].namaMesin + " \u2192 " + mesin[i].nilaiPerforma());
+            System.out.println((i + 1) + ". " + mesin[i].namaMesin + " -> " + mesin[i].nilaiPerforma());
         }
     }
 }

@@ -9,7 +9,8 @@ class mesinTraktorListrik extends mesinTraktor {
 
     @Override
     void tampilInfo() {
-        System.out.println("Mesin Traktor Listrik " + namaMesin + " | Tarik: " + kapasitasTarik + " ton | Baterai: " + kapasitasBaterai + " kWh | Tenaga: " + tenagaHP + " HP");
+        System.out.println("Mesin Traktor Listrik " + namaMesin + " | Tarik: " + kapasitasTarik + " ton | Baterai: "
+                + kapasitasBaterai + " kWh | Tenaga: " + tenagaHP + " HP");
     }
 
     @Override
@@ -24,6 +25,6 @@ class mesinTraktorListrik extends mesinTraktor {
 
     @Override
     void suaraMesin() {
-        System.out.println(namaMesin + " \u2192 Bzzzzz! Mesin traktor listrik aktif!");
+        System.out.println(namaMesin + " -> Bzzzzz! Mesin traktor listrik aktif!");
     }
 }

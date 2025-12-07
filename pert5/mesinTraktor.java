@@ -9,7 +9,8 @@ class mesinTraktor extends defaultMesin {
 
     @Override
     void tampilInfo() {
-        System.out.println("Mesin Traktor " + namaMesin + " | Tarik: " + kapasitasTarik + " ton | Tenaga: " + tenagaHP + " HP");
+        System.out.println(
+                "Mesin Traktor " + namaMesin + " | Tarik: " + kapasitasTarik + " ton | Tenaga: " + tenagaHP + " HP");
     }
 
     @Override
@@ -23,6 +24,6 @@ class mesinTraktor extends defaultMesin {
     }
 
     void suaraMesin() {
-        System.out.println(namaMesin + " \u2192 GGGRRRR! Hidup Mesinnn!");
+        System.out.println(namaMesin + " -> GGGRRRR! Hidup Mesinnn!");
     }
 }

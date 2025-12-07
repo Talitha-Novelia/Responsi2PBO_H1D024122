@@ -23,6 +23,6 @@ class mesinMotor extends defaultMesin {
     }
 
     void suaraMesin() {
-        System.out.println(namaMesin + " \u2192 Brummm! Mesin motor menyala!");
+        System.out.println(namaMesin + " -> Brummm! Mesin motor menyala!");
     }
 }
