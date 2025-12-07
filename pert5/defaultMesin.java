@@ -2,7 +2,6 @@ class defaultMesin {
     String namaMesin;
     int tenagaHP;
 
-    // Constructor
     defaultMesin(String nama, int hp) {
         this.namaMesin = nama;
         this.tenagaHP = hp;

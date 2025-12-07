@@ -1,7 +1,6 @@
 class mesinTraktorListrik extends mesinTraktor {
     double kapasitasBaterai;
 
-    // Constructor
     mesinTraktorListrik(String nama, int hp, double tarik, double baterai) {
         super(nama, hp, tarik);
         this.kapasitasBaterai = baterai;
@@ -15,7 +14,7 @@ class mesinTraktorListrik extends mesinTraktor {
 
     @Override
     double nilaiPerforma() {
-        return (tenagaHP * 1.1) + (kapasitasBaterai * 5);
+        return (tenagaHP * 0.9) + (kapasitasTarik * 10);
     }
 
     @Override

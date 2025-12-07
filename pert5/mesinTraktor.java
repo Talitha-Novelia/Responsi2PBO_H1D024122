@@ -1,7 +1,6 @@
 class mesinTraktor extends defaultMesin {
     double kapasitasTarik;
 
-    // Constructor
     mesinTraktor(String nama, int hp, double tarik) {
         super(nama, hp);
         this.kapasitasTarik = tarik;
@@ -15,7 +14,7 @@ class mesinTraktor extends defaultMesin {
 
     @Override
     double nilaiPerforma() {
-        return (tenagaHP * 0.9) + (kapasitasTarik * 10);
+        return (tenagaHP * 1.1) + (kapasitasTarik * 5);
     }
 
     @Override
@@ -24,6 +23,6 @@ class mesinTraktor extends defaultMesin {
     }
 
     void suaraMesin() {
-        System.out.println(namaMesin + " -> GGGRRRR! Hidup Mesinnn!");
+        System.out.println(namaMesin + " -> GGGRRRR! Hidup mesinnn!");
     }
 }

@@ -1,7 +1,6 @@
 class mesinMotor extends defaultMesin {
     String tipeMotor;
 
-    // Constructor
     mesinMotor(String nama, int hp, String tipe) {
         super(nama, hp);
         this.tipeMotor = tipe;
